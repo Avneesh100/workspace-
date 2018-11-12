@@ -12,7 +12,7 @@ namespace ATM
         {
             Console.WriteLine("Enter The Amount for Withdrawal");
             int withdrawalAmount = Convert.ToInt16(Console.ReadLine());
-            
+
 
             if (withdrawalAmount == 0)
             {
@@ -24,22 +24,19 @@ namespace ATM
                 if (withdrawalAmount % 5 == 0)
                 {
                     int fiveHundred = withdrawalAmount / 500;
-                    double fiveHundred_Remaining = withdrawalAmount % 500;
-                    int fiveHundredRemaining_Int = Convert.ToInt16(fiveHundred_Remaining);
+                    int fiveHundred_Remaining = withdrawalAmount % 500;
+
                     if (fiveHundred > 0)
                     {
                         Console.WriteLine("500 * " + fiveHundred);
                     }
-                    withdrawalAmount = fiveHundredRemaining_Int;
-
-
+                    withdrawalAmount = fiveHundred_Remaining;
                     int Hundred = withdrawalAmount / 100;
                     if (Hundred > 0)
                     {
                         Console.WriteLine("100 * " + Hundred);
-                        double hundred_Remaining = withdrawalAmount % 100;
-                        int hundredRemaining_Int = Convert.ToInt16(hundred_Remaining);
-                        withdrawalAmount = hundredRemaining_Int;
+                        int hundred_Remaining = withdrawalAmount % 100;
+                        withdrawalAmount = hundred_Remaining;
                     }
 
 
@@ -47,9 +44,8 @@ namespace ATM
                     if (fifty > 0)
                     {
                         Console.WriteLine("50 * " + fifty);
-                        double fifty_Remaining = withdrawalAmount % 50;
-                        int fiftyRemaining_Int = Convert.ToInt16(fifty_Remaining);
-                        withdrawalAmount = fiftyRemaining_Int;
+                        int fifty_Remaining = withdrawalAmount % 50;
+                        withdrawalAmount = fifty_Remaining;
                     }
 
 
@@ -59,9 +55,8 @@ namespace ATM
                     if (Ten > 0)
                     {
                         Console.WriteLine("10 * " + Ten);
-                        double Ten_Remaining = withdrawalAmount % 10;
-                        int Ten_Remaining_Int = Convert.ToInt16(Ten_Remaining);
-                        withdrawalAmount = Ten_Remaining_Int;
+                        int Ten_Remaining = withdrawalAmount % 10;
+                        withdrawalAmount = Ten_Remaining;
                     }
 
 
@@ -71,15 +66,15 @@ namespace ATM
                     if (five > 0)
                     {
                         Console.WriteLine("5 * " + five);
-                       
+
                     }
                 }
                 else
                 {
                     Console.WriteLine("Invalid Amount");
                 }
-               
-                
+
+
                 Console.ReadLine();
             }
 
