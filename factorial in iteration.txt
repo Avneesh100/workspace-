@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace factorial
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+             Console.WriteLine("Enter The Number Please");
+
+             int Totalfact = 1;
+
+            int Userinput = Convert.ToInt16(Console.ReadLine());
+
+
+
+            if (Userinput == 0 || Userinput == 1)
+            {
+                Console.WriteLine("1");
+            }
+            else
+            {
+                for (int i = 1; i <= Userinput; i++)
+                {
+                    Totalfact = Totalfact * i;
+                }
+            }
+            Console.Write("Factorial of " + Userinput + " is: " + Totalfact);
+            Console.ReadLine();
+            
+        }
+    }
+}
